@@ -1,0 +1,9 @@
+# .htaccess
+RewriteEngine On
+
+# Dosya veya klasör gerçekten varsa kuralı işletme
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# SEO Link Kuralı: site.com/hikaye/12 -> story.php?id=12
+RewriteRule ^hikaye/([0-9]+)/?$ story.php?id=$1 [L,QSA]
