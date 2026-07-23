@@ -1,0 +1,55 @@
+:root {
+    --bg-dark: #0a0a0f;
+    --neon-green: #00ffcc; /* Onaylı Kullanıcı */
+    --neon-blue: #00e5ff;  /* Moderatör */
+    --neon-red: #ff3366;   /* Admin */
+    --glass-bg: rgba(20, 20, 30, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Glassmorphism Panel Tasarımı */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Rol Tikleri */
+.badge {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 0.8em;
+    margin-left: 5px;
+    box-shadow: 0 0 10px currentColor;
+}
+.badge.admin { color: var(--neon-red); border: 1px solid var(--neon-red); }
+.badge.mod { color: var(--neon-blue); border: 1px solid var(--neon-blue); }
+.badge.user { color: var(--neon-green); border: 1px solid var(--neon-green); }
+
+/* Neon Inputlar */
+input, textarea {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--glass-border);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+input:focus, textarea:focus {
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 8px var(--neon-blue);
+}
