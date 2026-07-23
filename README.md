@@ -1,0 +1,2 @@
+# ghos.tr
+Korku hikayeleri
